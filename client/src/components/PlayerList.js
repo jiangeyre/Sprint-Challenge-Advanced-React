@@ -7,13 +7,13 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
   flexBox: {
-    width: '200px',
+    width: '190px',
     margin: '10px',
   },
   paper: {
     textAlign: 'center',
     color: theme.palette.text.primary,
-    height: '150px',
+    height: '170px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -42,7 +42,7 @@ const PlayerList = ({ players }) => {
     <>
       <Container maxWidth="lg">
         <Button variant="outlined" color="primary" onClick={toggleMode} className={classes.butt}>Toggle Dark Mode</Button>
-        <Box display="flex" flexWrap="wrap" alignItems="center" justifyContent="flex-start">
+        <Box display="flex" flexWrap="wrap" alignItems="center" justifyContent="center">
           {players.map(player => (
             <Box className={classes.flexBox}>
               <Paper className={classes.paper}>
