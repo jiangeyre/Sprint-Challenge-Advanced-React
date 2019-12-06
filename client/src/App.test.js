@@ -1,5 +1,6 @@
 import React from 'react';
 import * as rtl from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import App from './App';
 
 // it('renders without crashing', () => {
@@ -22,7 +23,7 @@ test('Toggle exists in the doc.', () => {
 });
 
 test('Toggle fires successfully.', () => {
-  const container = render(<App />);
+  const container = rtl.render(<App />);
   const toggle = container.queryByText(/toggle dark mode/i);
 
   rtl.fireEvent.click(toggle);
